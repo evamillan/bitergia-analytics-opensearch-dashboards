@@ -24,16 +24,16 @@ ENV PATH=/usr/share/opensearch-dashboards/bin:$PATH
 #
 
 # Install visualization plugins
-RUN opensearch-dashboards-plugin install "https://github.com/dlumbrer/kbn_radar/releases/download/osd-2.7.0/kbn_radar-7.10.0_2.7.0.zip"
-RUN opensearch-dashboards-plugin install "https://github.com/dlumbrer/kbn_network/releases/download/osd-2.7.0/kbn_network-7.10.0_2.7.0.zip"
-RUN opensearch-dashboards-plugin install "https://github.com/dlumbrer/kbn_dotplot/releases/download/osd-2.7.0/kbn_dotplot-7.10.0_2.7.0.zip"
-RUN opensearch-dashboards-plugin install "https:/github.com/dlumbrer/kbn_polar/releases/download/osd-2.7.0/kbn_polar-1.0.0_2.7.0.zip"
+RUN opensearch-dashboards-plugin install "https://github.com/evamillan/radar-vis-plugin/releases/download/0.15.2/radar-vis-plugin-0.15.2_2.11.0.zip"
+RUN opensearch-dashboards-plugin install "https://github.com/evamillan/network-vis-plugin/releases/download/0.15.2/network-vis-plugin-0.15.2_2.11.0.zip"
+RUN opensearch-dashboards-plugin install "https://github.com/evamillan/dotplot-vis-plugin/releases/download/0.15.2/dotplot-vis-plugin-0.15.2_2.11.0.zip"
+RUN opensearch-dashboards-plugin install "https://github.com/evamillan/polar-vis-plugin/releases/download/0.15.2/polar-vis-plugin-0.15.2_2.11.0.zip"
 
 # Install enhanced table plugin
 RUN opensearch-dashboards-plugin install "https://github.com/fbaligand/kibana-enhanced-table/releases/download/v1.13.3/enhanced-table-1.13.3_osd-2.7.0.zip"
 
 # Install Bitergia Analytics plugins
-RUN opensearch-dashboards-plugin install "https://github.com/bitergia-analytics/bitergia-analytics-plugin/releases/download/0.14.0/bitergia_analytics-0.14.0_2.7.0.zip"
+RUN opensearch-dashboards-plugin install "https://github.com/evamillan/bitergia-analytics-plugin/releases/download/0.15.2/bitergia_analytics-0.15.2_2.7.0.zip"
 
 # Remove plugins not supported on this release
 RUN opensearch-dashboards-plugin remove reportsDashboards
